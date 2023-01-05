@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 
-const invite = await text.createInvite({ reason: `For ${client.user.tag} Developer(s)`, maxAge: 0 });
 
 const Functions = require("../../database/models/functions");
 
@@ -22,7 +21,6 @@ module.exports = async (client, guild) => {
         .setTitle("🟢・Added to a new server!")
         .addField("Total servers:", `${client.guilds.cache.size}`, true)
         .addField("Server name", `${guild.name}`, true)
-        .addField("Server Invite", `[Here is ${guild.name} invite ](https://discord.gg/${invite.code})`, true)
         .addField("Server ID", `${guild.id}`, true)
         .addField("Server members", `${guild.memberCount}`, true)        
         .addField("Server owner", `<@!${guild.ownerId}> (${guild.ownerId})`, true)
